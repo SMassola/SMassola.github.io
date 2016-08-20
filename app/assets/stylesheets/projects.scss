@@ -1,0 +1,92 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background: rgba(243, 239, 224, 0.95);
+}
+
+.projects-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 30%;
+}
+
+.projects-header-title {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  font-size: 50px;
+}
+
+.projects-header-summary {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  font-size: 25px;
+}
+
+.projects-info-container {
+  font-family: 'Roboto', sans-serif;
+  font-weight: thin;
+  letter-spacing: 1px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+}
+
+.overlay {
+  background:rgba(0,0,0,.75);
+  text-align:center;
+  padding:45px 0 66px 0;
+  opacity:0;
+  -webkit-transition: opacity .25s ease;
+  -moz-transition: opacity .25s ease;
+}
+
+.project1-container:hover .overlay {
+  opacity:1;
+}
+
+.project2-container:hover .overlay {
+  opacity:1;
+}
+
+.project3-container:hover .overlay {
+  opacity:1;
+}
+
+.project1-container {
+  background: url("../images/Hotline_Bling.png"), linear-gradient();
+  background-size: cover;
+  background-position: center;
+  height: 0;
+  width: 30%;
+  padding-bottom: 20%;
+  border: 1px solid green;
+}
+
+.project2-container {
+  background: url("../images/BorderPreview.png");
+  background-size: cover;
+  background-position: center;
+  height: 0;
+  width: 30%;
+  padding-bottom: 20%;
+  border: 1px solid green;
+}
+
+.project3-container {
+  background: url("../images/Dactyl.png");
+  background-size: cover;
+  background-position: center;
+  height: 0;
+  width: 30%;
+  padding-bottom: 20%;
+  border: 1px solid green;
+}

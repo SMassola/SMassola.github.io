@@ -1,0 +1,95 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 30%;
+}
+
+.profile-header-title {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  font-size: 50px;
+}
+
+.profile-header-summary {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  font-size: 25px;
+}
+
+hr {
+    width: 60%;
+    border-color: #727878;
+    opacity: .9;
+    filter: alpha(opacity=20);
+}
+
+.profile-info {
+  font-family: 'Roboto', sans-serif;
+  font-weight: thin;
+  letter-spacing: 1px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 70%;
+}
+
+.picture {
+  height: 0;
+  width: 20%;
+  padding-bottom: 20%;
+  border: 1px solid red;
+  margin-top: 5%;
+  border-radius: 50%;
+}
+
+.profile-info-about {
+  height: 0;
+  width: 30%;
+  padding-bottom: 30%;
+  border: 1px solid green;
+}
+
+.profile-info-about-title {
+  margin: 10px;
+  font-weight: lighter;
+  font-size: 25px;
+  text-align: center;
+}
+
+.profile-info-about-paragraph {
+  margin: 10px;
+  white-space: pre-wrap;
+}
+
+.profile-info-demographic {
+  height: 0;
+  width: 30%;
+  padding-bottom: 30%;
+  border: 1px solid green;
+}
+
+.profile-info-demographic-title {
+  margin: 10px;
+  font-weight: lighter;
+  font-size: 25px;
+  text-align: center;
+}
+
+.profile-info-demographic-paragraph {
+  margin: 10px;
+  white-space: pre-wrap;
+}

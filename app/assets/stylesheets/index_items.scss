@@ -1,0 +1,44 @@
+.index-item {
+  width: 300px;
+  height: 100%;
+  border: 1px solid black;
+  transition: all .2s ease-in-out;
+}
+
+.index:hover .index-item {
+  opacity: 0.5;
+}
+
+.index .index-item:hover {
+  z-index: 1;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.education {
+  background-image: url("../images/education.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.profile {
+  background: url("../images/vagabond_loading_screen.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.projects {
+  background: url("../images/projects.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.skills {
+  background: url("../images/skills.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
