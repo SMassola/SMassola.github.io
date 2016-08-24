@@ -22,9 +22,33 @@ const Projects = React.createClass({
         </div>
         <hr></hr>
         <div className="projects-info-container">
-          <div className="project1-container"></div>
-          <div className="project2-container"></div>
-          <div className="project3-container"></div>
+          <div className="project1-container tint">
+            <div className="project1-caption">
+              <div className="project1-title">Lyricist</div>
+              <div className="project1-summary">An Annotation Site</div>
+            </div>
+            <figure className="project1-image">
+              <img src="app/assets/images/Hotline_Bling.png"></img>
+            </figure>
+          </div>
+          <div className="project2-container tint">
+            <div className="project2-caption">
+              <div className="project2-title">HTML Hierarchy Visualizer</div>
+              <div className="project2-summary">Handy chrome extension for front end developers</div>
+            </div>
+            <figure className="project2-image">
+              <img src="app/assets/images/BorderPreview.png"></img>
+            </figure>
+          </div>
+          <div className="project3-container tint">
+            <div className="project3-caption">
+              <div className="project3-title">Dactyl</div>
+              <div className="project3-summary">Javascript game inspired by IOS Dactyl app</div>
+            </div>
+            <figure className="project3-image">
+              <img src="app/assets/images/Dactyl.png"></img>
+            </figure>
+          </div>
         </div>
       </div>
     );
@@ -32,3 +56,6 @@ const Projects = React.createClass({
 });
 
 module.exports = Projects;
+
+// <div className="project1-title">Lyricist</div>
+// <div className="project1-summary">A lyrics annotation website</div>

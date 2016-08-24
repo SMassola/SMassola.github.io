@@ -27400,15 +27400,84 @@
 	      React.createElement(
 	        "div",
 	        { className: "projects-info-container" },
-	        React.createElement("div", { className: "project1-container" }),
-	        React.createElement("div", { className: "project2-container" }),
-	        React.createElement("div", { className: "project3-container" })
+	        React.createElement(
+	          "div",
+	          { className: "project1-container tint" },
+	          React.createElement(
+	            "div",
+	            { className: "project1-caption" },
+	            React.createElement(
+	              "div",
+	              { className: "project1-title" },
+	              "Lyricist"
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "project1-summary" },
+	              "An Annotation Site"
+	            )
+	          ),
+	          React.createElement(
+	            "figure",
+	            { className: "project1-image" },
+	            React.createElement("img", { src: "app/assets/images/Hotline_Bling.png" })
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "project2-container tint" },
+	          React.createElement(
+	            "div",
+	            { className: "project2-caption" },
+	            React.createElement(
+	              "div",
+	              { className: "project2-title" },
+	              "HTML Hierarchy Visualizer"
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "project2-summary" },
+	              "Handy chrome extension for front end developers"
+	            )
+	          ),
+	          React.createElement(
+	            "figure",
+	            { className: "project2-image" },
+	            React.createElement("img", { src: "app/assets/images/BorderPreview.png" })
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "project3-container tint" },
+	          React.createElement(
+	            "div",
+	            { className: "project3-caption" },
+	            React.createElement(
+	              "div",
+	              { className: "project3-title" },
+	              "Dactyl"
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "project3-summary" },
+	              "Javascript game inspired by IOS Dactyl app"
+	            )
+	          ),
+	          React.createElement(
+	            "figure",
+	            { className: "project3-image" },
+	            React.createElement("img", { src: "app/assets/images/Dactyl.png" })
+	          )
+	        )
 	      )
 	    );
 	  }
 	});
 	
 	module.exports = Projects;
+	
+	// <div className="project1-title">Lyricist</div>
+	// <div className="project1-summary">A lyrics annotation website</div>
 
 /***/ }
 /******/ ]);
