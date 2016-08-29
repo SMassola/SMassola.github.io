@@ -27276,7 +27276,7 @@
 	            { className: "profile-info-demographic-paragraph" },
 	            React.createElement(
 	              "div",
-	              null,
+	              { className: "bold" },
 	              "Name:"
 	            ),
 	            React.createElement(
@@ -27286,7 +27286,7 @@
 	            ),
 	            React.createElement(
 	              "div",
-	              null,
+	              { className: "bold" },
 	              "Age:"
 	            ),
 	            React.createElement(
@@ -27296,7 +27296,7 @@
 	            ),
 	            React.createElement(
 	              "div",
-	              null,
+	              { className: "bold" },
 	              "Location:"
 	            ),
 	            React.createElement(
@@ -27335,14 +27335,112 @@
 /* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	var React = __webpack_require__(1);
 	
 	var Contact = React.createClass({
-	  displayName: 'Contact',
+	  displayName: "Contact",
+	  componentDidMount: function componentDidMount() {
+	    var elem = document.getElementsByClassName("contact-container")[0];
+	    elem.style.opacity = 0;
+	    window.requestAnimationFrame(function () {
+	      elem.style.transition = "opacity 500ms";
+	      elem.style.opacity = 1;
+	    });
+	  },
+	  _handleResume: function _handleResume() {
+	    window.open('./Resume.pdf', '_blank');
+	  },
+	  _handleLinkedIn: function _handleLinkedIn() {
+	    window.open('https://www.linkedin.com/in/steven-massola-b25773122', '_blank');
+	  },
+	  _handleGithub: function _handleGithub() {
+	    window.open('https://github.com/SMassola', '_blank');
+	  },
 	  render: function render() {
-	    return React.createElement('div', null);
+	    return React.createElement(
+	      "div",
+	      { className: "contact-container" },
+	      React.createElement(
+	        "div",
+	        { className: "contact-header" },
+	        React.createElement(
+	          "div",
+	          { className: "contact-header-title" },
+	          "Contact Information"
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "contact-header-summary" },
+	          "Get In Touch"
+	        )
+	      ),
+	      React.createElement("hr", null),
+	      React.createElement(
+	        "div",
+	        { className: "contact-info-container" },
+	        React.createElement(
+	          "div",
+	          { className: "email-container flex-item" },
+	          React.createElement(
+	            "div",
+	            { className: "contact-title" },
+	            "EMAIL"
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "email-name" },
+	            "Steven.Massola@gmail.com"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "address-container flex-item" },
+	          React.createElement(
+	            "div",
+	            { className: "contact-title" },
+	            "ADDRESS"
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "address-name" },
+	            "43 Chelford Road, North York, ON",
+	            React.createElement("br", null),
+	            "276 Ellsworth Street, San Francisco, CA"
+	          )
+	        ),
+	        React.createElement(
+	          "a",
+	          { className: "resume-container flex-item" },
+	          React.createElement(
+	            "div",
+	            { onClick: this._handleResume, className: "contact-title resume-title" },
+	            "RESUME"
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "resume-name" },
+	            "Formal documentation of my credentials"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "social-container flex-item" },
+	          React.createElement(
+	            "div",
+	            { className: "contact-title" },
+	            "SOCIAL MEDIA"
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "contact-icons" },
+	            React.createElement("img", { onClick: this._handleLinkedIn, className: "icon", src: "./app/assets/images/linkedin-icon.png" }),
+	            React.createElement("img", { onClick: this._handleGithub, className: "icon", src: "./app/assets/images/github-icon.png" })
+	          )
+	        )
+	      )
+	    );
 	  }
 	});
 	

@@ -36,11 +36,11 @@ const Profile = React.createClass({
           <div className="profile-info-demographic">
             <div className="profile-info-demographic-title">Details</div>
             <div className="profile-info-demographic-paragraph">
-              <div>Name:</div>
+              <div className="bold">Name:</div>
               <div>Steven Massola</div>
-              <div>Age:</div>
+              <div className="bold">Age:</div>
               <div>23 Years Old</div>
-              <div>Location:</div>
+              <div className="bold">Location:</div>
               <div>San Francisco, California + Toronto, Ontario</div>
             </div>
           </div>
