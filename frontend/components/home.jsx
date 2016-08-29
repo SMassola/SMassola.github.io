@@ -3,7 +3,9 @@ const React = require('react');
 const NavBar = require('./nav_bar');
 const Splash = require('./splash');
 const Profile = require('./profile');
-const Experiences = require('./experiences');
+const Education = require('./education');
+const Experience = require('./experience');
+const Skills = require('./skills');
 const Projects = require('./projects.jsx');
 const Contact = require('./contact');
 
@@ -42,21 +44,21 @@ const Home = React.createClass({
   render() {
       return (
         <div className="content">
-          <div className="index">
-            <div className="index-item profile" onClick={this._profileClick}></div>
-            <div className="index-item projects" onClick={this._projectsClick}></div>
-            <div className="index-item education" onClick={this._educationClick}></div>
-            <div className="index-item skills" onClick={this._skillsClick}></div>
-            <div className="index-item experience" onClick={this._experienceClick}></div>
-            <div className="index-item contact" onClick={this._contactClick}></div>
-            <div className="index-item"></div>
+          <div className="navigation">
+            <div className="nav-item" onClick={this._profileClick}>Profile</div>
+            <div className="nav-item" onClick={this._projectsClick}>Projects</div>
+            <div className="nav-item" onClick={this._educationClick}>Education</div>
+            <div className="nav-item" onClick={this._skillsClick}>Skills</div>
+            <div className="nav-item" onClick={this._experienceClick}>Experience</div>
+            <div className="nav-item" onClick={this._contactClick}>Contact</div>
           </div>
+          <div className="buffer"></div>
           <div className="details">
             {this.state.profile ? <Profile /> : ""}
             {this.state.projects ? <Projects /> : ""}
             {this.state.skills ? <Skills /> : ""}
             {this.state.education ? <Education /> : ""}
-            {this.state.experience ? <Work /> : ""}
+            {this.state.experience ? <Experience /> : ""}
             {this.state.contact ? <Contact /> : ""}
           </div>
         </div>

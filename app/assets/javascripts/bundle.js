@@ -27115,7 +27115,9 @@
 	var NavBar = __webpack_require__(243);
 	var Splash = __webpack_require__(240);
 	var Profile = __webpack_require__(239);
-	var Experiences = __webpack_require__(244);
+	var Education = __webpack_require__(247);
+	var Experience = __webpack_require__(249);
+	var Skills = __webpack_require__(248);
 	var Projects = __webpack_require__(246);
 	var Contact = __webpack_require__(242);
 	
@@ -27155,15 +27157,39 @@
 	      { className: 'content' },
 	      React.createElement(
 	        'div',
-	        { className: 'index' },
-	        React.createElement('div', { className: 'index-item profile', onClick: this._profileClick }),
-	        React.createElement('div', { className: 'index-item projects', onClick: this._projectsClick }),
-	        React.createElement('div', { className: 'index-item education', onClick: this._educationClick }),
-	        React.createElement('div', { className: 'index-item skills', onClick: this._skillsClick }),
-	        React.createElement('div', { className: 'index-item experience', onClick: this._experienceClick }),
-	        React.createElement('div', { className: 'index-item contact', onClick: this._contactClick }),
-	        React.createElement('div', { className: 'index-item' })
+	        { className: 'navigation' },
+	        React.createElement(
+	          'div',
+	          { className: 'nav-item', onClick: this._profileClick },
+	          'Profile'
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'nav-item', onClick: this._projectsClick },
+	          'Projects'
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'nav-item', onClick: this._educationClick },
+	          'Education'
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'nav-item', onClick: this._skillsClick },
+	          'Skills'
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'nav-item', onClick: this._experienceClick },
+	          'Experience'
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'nav-item', onClick: this._contactClick },
+	          'Contact'
+	        )
 	      ),
+	      React.createElement('div', { className: 'buffer' }),
 	      React.createElement(
 	        'div',
 	        { className: 'details' },
@@ -27171,7 +27197,7 @@
 	        this.state.projects ? React.createElement(Projects, null) : "",
 	        this.state.skills ? React.createElement(Skills, null) : "",
 	        this.state.education ? React.createElement(Education, null) : "",
-	        this.state.experience ? React.createElement(Work, null) : "",
+	        this.state.experience ? React.createElement(Experience, null) : "",
 	        this.state.contact ? React.createElement(Contact, null) : ""
 	      )
 	    );
@@ -27340,23 +27366,7 @@
 	module.exports = NavBar;
 
 /***/ },
-/* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var React = __webpack_require__(1);
-	
-	var Experiences = React.createClass({
-	  displayName: 'Experiences',
-	  render: function render() {
-	    return React.createElement('div', null);
-	  }
-	});
-	
-	module.exports = Experiences;
-
-/***/ },
+/* 244 */,
 /* 245 */,
 /* 246 */
 /***/ function(module, exports, __webpack_require__) {
@@ -27367,8 +27377,6 @@
 	
 	var Projects = React.createClass({
 	  displayName: "Projects",
-	
-	
 	  componentDidMount: function componentDidMount() {
 	    var elem = document.getElementsByClassName("projects-container")[0];
 	    elem.style.opacity = 0;
@@ -27377,7 +27385,32 @@
 	      elem.style.opacity = 1;
 	    });
 	  },
-	
+	  _handleLive: function _handleLive(e) {
+	    switch (parseInt(e.target.id)) {
+	      case 1:
+	        window.location.href = "http://lyricist.us";
+	        break;
+	      case 2:
+	        window.location.href = "https://chrome.google.com/webstore/detail/html-hierarchy-visualizer/beaeppehjnnnidajcmalfcajahopihcb";
+	        break;
+	      case 3:
+	        window.location.href = "https://smassola.github.io/Dactyl";
+	        break;
+	    }
+	  },
+	  _handleGit: function _handleGit(e) {
+	    switch (parseInt(e.target.id)) {
+	      case 1:
+	        window.location.href = "https://github.com/SMassola/Lyricist";
+	        break;
+	      case 2:
+	        window.location.href = "https://github.com/SMassola/HTML-Hierarchy-Visualizer";
+	        break;
+	      case 3:
+	        window.location.href = "https://github.com/SMassola/Dactyl";
+	        break;
+	    }
+	  },
 	  render: function render() {
 	    return React.createElement(
 	      "div",
@@ -27415,6 +27448,20 @@
 	              "div",
 	              { className: "project1-summary" },
 	              "An Annotation Site"
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "project-button-container" },
+	              React.createElement(
+	                "button",
+	                { className: "live-button", id: "1", onClick: this._handleLive },
+	                "Live"
+	              ),
+	              React.createElement(
+	                "button",
+	                { className: "github-button", id: "1", onClick: this._handleGit },
+	                "Github"
+	              )
 	            )
 	          ),
 	          React.createElement(
@@ -27438,6 +27485,20 @@
 	              "div",
 	              { className: "project2-summary" },
 	              "Handy chrome extension for front end developers"
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "project-button-container" },
+	              React.createElement(
+	                "button",
+	                { className: "live-button", id: "2", onClick: this._handleLive },
+	                "Live"
+	              ),
+	              React.createElement(
+	                "button",
+	                { className: "github-button", id: "2", onClick: this._handleGit },
+	                "Github"
+	              )
 	            )
 	          ),
 	          React.createElement(
@@ -27461,6 +27522,20 @@
 	              "div",
 	              { className: "project3-summary" },
 	              "Javascript game inspired by IOS Dactyl app"
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "project-button-container" },
+	              React.createElement(
+	                "button",
+	                { className: "live-button", id: "3", onClick: this._handleLive },
+	                "Live"
+	              ),
+	              React.createElement(
+	                "button",
+	                { className: "github-button", id: "3", onClick: this._handleGit },
+	                "Github"
+	              )
 	            )
 	          ),
 	          React.createElement(
@@ -27478,6 +27553,355 @@
 	
 	// <div className="project1-title">Lyricist</div>
 	// <div className="project1-summary">A lyrics annotation website</div>
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var React = __webpack_require__(1);
+	
+	var Education = React.createClass({
+	  displayName: "Education",
+	  componentDidMount: function componentDidMount() {
+	    var elem = document.getElementsByClassName("education-container")[0];
+	    elem.style.opacity = 0;
+	    window.requestAnimationFrame(function () {
+	      elem.style.transition = "opacity 500ms";
+	      elem.style.opacity = 1;
+	    });
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      { className: "education-container" },
+	      React.createElement(
+	        "div",
+	        { className: "education-header" },
+	        React.createElement(
+	          "div",
+	          { className: "education-header-title" },
+	          "Education"
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "education-header-summary" },
+	          "University of Waterloo + App Academy"
+	        )
+	      ),
+	      React.createElement("hr", null),
+	      React.createElement(
+	        "div",
+	        { className: "education-info-container" },
+	        React.createElement(
+	          "ul",
+	          { className: "education-list" },
+	          React.createElement(
+	            "li",
+	            { className: "education-list-item" },
+	            React.createElement(
+	              "div",
+	              { className: "education-item" },
+	              React.createElement(
+	                "div",
+	                { className: "education-info" },
+	                React.createElement("div", { className: "education-info-front education-img-1" }),
+	                React.createElement(
+	                  "div",
+	                  { className: "education-info-back" },
+	                  React.createElement(
+	                    "h3",
+	                    null,
+	                    "BASc in Honors Mechanical Engineering"
+	                  ),
+	                  React.createElement(
+	                    "h5",
+	                    null,
+	                    "Sept 2010 - Oct 2015"
+	                  ),
+	                  React.createElement(
+	                    "p",
+	                    null,
+	                    "5-year, co-operative program - 5 four-month mechanical engineering internships"
+	                  ),
+	                  React.createElement(
+	                    "p",
+	                    null,
+	                    "University of Waterloo",
+	                    React.createElement(
+	                      "a",
+	                      { href: "https://uwaterloo.ca/" },
+	                      "Learn More"
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            { className: "education-list-item" },
+	            React.createElement(
+	              "div",
+	              { className: "education-item" },
+	              React.createElement(
+	                "div",
+	                { className: "education-info" },
+	                React.createElement("div", { className: "education-info-front education-img-2" }),
+	                React.createElement(
+	                  "div",
+	                  { className: "education-info-back" },
+	                  React.createElement(
+	                    "h3",
+	                    null,
+	                    "Web Development Program"
+	                  ),
+	                  React.createElement(
+	                    "h5",
+	                    null,
+	                    "May 2016 - July 2016"
+	                  ),
+	                  React.createElement(
+	                    "p",
+	                    null,
+	                    "12 week immersive 1000-hour web development program with 3% acceptance rate"
+	                  ),
+	                  React.createElement(
+	                    "p",
+	                    null,
+	                    "App Academy",
+	                    React.createElement(
+	                      "a",
+	                      { href: "https://www.appacademy.io/" },
+	                      "Learn More"
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = Education;
+
+/***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var React = __webpack_require__(1);
+	
+	var Skills = React.createClass({
+	  displayName: "Skills",
+	  componentDidMount: function componentDidMount() {
+	    var elem = document.getElementsByClassName("skills-container")[0];
+	    elem.style.opacity = 0;
+	    window.requestAnimationFrame(function () {
+	      elem.style.transition = "opacity 500ms";
+	      elem.style.opacity = 1;
+	    });
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      { className: "skills-container" },
+	      React.createElement(
+	        "div",
+	        { className: "skills-header" },
+	        React.createElement(
+	          "div",
+	          { className: "skills-header-title" },
+	          "Skills"
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skills-header-summary" },
+	          "Web Development"
+	        )
+	      ),
+	      React.createElement("hr", null),
+	      React.createElement(
+	        "div",
+	        { className: "skills-info-container" },
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/ruby-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name ruby" },
+	            "RUBY"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/rails-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name rails" },
+	            "RAILS"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/js-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name js" },
+	            "JAVASCRIPT"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/jquery-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name jquery" },
+	            "JQUERY"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/react-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name react" },
+	            "REACT"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/flux-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name flux" },
+	            "FLUX"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/html-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name html" },
+	            "HTML"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/css-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name css" },
+	            "CSS"
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = Skills;
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var React = __webpack_require__(1);
+	
+	var Experience = React.createClass({
+	  displayName: "Experience",
+	  componentDidMount: function componentDidMount() {
+	    var elem = document.getElementsByClassName("experience-container")[0];
+	    elem.style.opacity = 0;
+	    window.requestAnimationFrame(function () {
+	      elem.style.transition = "opacity 500ms";
+	      elem.style.opacity = 1;
+	    });
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      { className: "experience-container" },
+	      React.createElement(
+	        "div",
+	        { className: "experience-header" },
+	        React.createElement(
+	          "div",
+	          { className: "experience-header-title" },
+	          "Work Experience"
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "experience-header-summary" },
+	          "Engineer and Designer"
+	        )
+	      ),
+	      React.createElement("hr", null),
+	      React.createElement(
+	        "div",
+	        { className: "experience-info-container" },
+	        React.createElement(
+	          "div",
+	          { className: "experience-info" },
+	          React.createElement("img", { className: "work-img", src: "https://upload.wikimedia.org/wikipedia/en/d/db/Amec_Foster_Wheeler_logo.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "work-desc" },
+	            "May 2015 - Aug 2015"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "experience-info" },
+	          React.createElement("img", { className: "work-img", src: "http://www.korex-ca.com/wp-content/uploads/2014/09/korex.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "work-desc" },
+	            "May 2014 - Aug 2014"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "experience-info" },
+	          React.createElement("img", { className: "work-img", src: "https://upload.wikimedia.org/wikipedia/en/9/98/City_of_Toronto_Logo.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "work-desc" },
+	            "Sept 2013 - Dec 2013"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "experience-info" },
+	          React.createElement("img", { className: "work-img", src: "https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Golder_Associates_logo.svg/220px-Golder_Associates_logo.svg.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "work-desc" },
+	            "Sept 2011 - Dec 2011"
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = Experience;
 
 /***/ }
 /******/ ]);

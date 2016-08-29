@@ -4,8 +4,18 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+html, body {
+  max-width: 100%;
+}
+
 html, body, #root, .app, .content {
   width: 100%;
+  min-height: 100vh;
 }
 
 .content {
@@ -20,6 +30,8 @@ html, body, #root, .app, .content {
 html {
   position: relative;
   background: url("../images/background1.jpg") no-repeat center center fixed;
+  background-repeat:no-repeat;
+  background-position:fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-height: calc(100vh - 200px);
   height: 100%;
   color: black;
   background: rgba(243, 239, 224, 0.95);
@@ -78,7 +79,6 @@
 .tint {
   position: relative;
   float: left;
-  cursor: pointer;
 }
 
 .tint:before {
@@ -101,9 +101,9 @@
 }
 
 .project1-caption, .project2-caption, .project3-caption {
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -115,33 +115,89 @@
 .tint:hover .project1-caption {
   opacity: 1;
   color: white;
-  z-index: 1;
 }
 
 .tint:hover .project2-caption {
   opacity: 1;
   color: white;
-  z-index: 1;
 }
 
 .tint:hover .project3-caption {
   opacity: 1;
   color: white;
-  z-index: 1;
 }
 
 .project1-title, .project2-title, .project3-title {
+  padding-bottom: 15px;
+  width: 100%;
+  position: relative;
   font-weight: bold;
   font-size: 30px;
 }
 
 .project1-summary, .project2-summary, .project3-summary {
-  padding-top: 10px;
+  pointer-events: none;
+  padding-top: 15px;
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(100%,0,0);
   transform: translate3d(100%,0,0);
+}
+
+.project-button-container {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.live-button, .github-button {
+  cursor: pointer;
+  width: 100px;
+  height: auto;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  font-size: 20px;
+  margin: 20px;
+  padding: 5px;
+  transition: all .2s ease-in-out;
+}
+
+.live-button:hover, .github-button:hover {
+  transform: scale(1.4);
+}
+
+.live-button:focus, .github-button:focus {
+  outline: none;
+  border: 1px inset black;
+  color: black;
+}
+
+.project1-title::after, .project2-title:after, .project3-title:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  content: '';
+  -webkit-transition: width 0.35s, -webkit-transform 0.35s;
+  transition: width 0.35s, transform 0.35s;
+}
+
+.tint:hover .project1-title::after {
+  width: 100%;
+}
+
+.tint:hover .project2-title:after {
+  width: 100%;
+}
+
+.tint:hover .project3-title:after {
+  width: 100%;
 }
 
 .tint:hover .project1-summary {
@@ -160,4 +216,8 @@
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+}
+
+.tint:hover .project-button-container {
+    opacity: 1;
 }

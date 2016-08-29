@@ -1,0 +1,22 @@
+.navigation {
+  position: fixed;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  color: white;
+  background: #222222;
+  padding-left: 25%;
+  padding-right: 25%;
+  z-index: 10;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+  color: #63d9fd;
+}
+
+.buffer {
+  height: 200px;
+}
