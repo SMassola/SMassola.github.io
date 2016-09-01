@@ -2,4 +2,4 @@
 
 [Site Link][link]
 
-[link]: <smassola.me>
+[link]: <https://smassola.me>
