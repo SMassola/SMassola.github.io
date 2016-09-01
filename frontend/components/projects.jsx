@@ -53,7 +53,7 @@ const Projects = React.createClass({
           <div className="project1-container tint">
             <div className="project1-caption">
               <div className="project1-title">Lyricist</div>
-              <div className="project1-summary">An Annotation Site</div>
+              <div className="project1-summary">Single page web app that allows users to annotate their favorite songs</div>
               <div className="project-button-container">
                 <button className="live-button" id="1" onClick={this._handleLive}>Live</button>
                 <button className="github-button" id="1" onClick={this._handleGit}>Github</button>
@@ -66,7 +66,7 @@ const Projects = React.createClass({
           <div className="project2-container tint">
             <div className="project2-caption">
               <div className="project2-title">HTML Hierarchy Visualizer</div>
-              <div className="project2-summary">Handy chrome extension for front end developers</div>
+              <div className="project2-summary">Handy chrome extension for front end developers that helps visualize elements on the page</div>
               <div className="project-button-container">
                 <button className="live-button" id="2" onClick={this._handleLive}>Live</button>
                 <button className="github-button" id="2" onClick={this._handleGit}>Github</button>
@@ -79,7 +79,7 @@ const Projects = React.createClass({
           <div className="project3-container tint">
             <div className="project3-caption">
               <div className="project3-title">Dactyl</div>
-              <div className="project3-summary">Javascript game inspired by IOS Dactyl app</div>
+              <div className="project3-summary">Javascript game inspired by IOS Dactyl app where players try to defuse as many bombs as they can</div>
               <div className="project-button-container">
                 <button className="live-button" id="3" onClick={this._handleLive}>Live</button>
                 <button className="github-button" id="3" onClick={this._handleGit}>Github</button>

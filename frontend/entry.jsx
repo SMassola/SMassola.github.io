@@ -6,6 +6,9 @@ const Router = ReactRouter.Router;
 const Route = ReactRouter.Route;
 const IndexRoute = ReactRouter.IndexRoute;
 const hashHistory = ReactRouter.hashHistory;
+var routerHistory = require('react-router').useRouterHistory;
+var createHistory = require('history/lib/createHashHistory');
+var appHistory = routerHistory(createHistory)({ queryKey: false });
 
 const Home = require('./components/home');
 
@@ -28,6 +31,5 @@ const routes = (
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
-  console.log(root);
-  ReactDOM.render(<Router history={hashHistory} routes={routes} />, root);
+  ReactDOM.render(<Router history={appHistory} routes={routes} />, root);
 });

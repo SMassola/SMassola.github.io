@@ -23,13 +23,13 @@ const Profile = React.createClass({
           <div className="profile-info-about">
             <div className="profile-info-about-title">About Me</div>
             <div className="profile-info-about-paragraph">
-              I am a strategist. I love a challenge, be it a design problem,
+              I am a strategist and I love a challenge. Be it a design problem,
               a coding challenge, a riddle, a game of chess. No challenge is too big nor too small.
-              That was the allure that drew me in to become a web developer -
+              That was the allure that drew me in to become a software developer -
               I'm constantly being challenged. I'm constantly acquiring new skills.
               I'm constantly entertained.
 
-              I bring the design and problem solving capabilities of a mechanical engineer with every
+              I bring the design and problem solving capabilities of a pragmatic mechanical engineer to every
               challenge in software development that I encounter. There isn't a challenge I can't overcome.
             </div>
           </div>

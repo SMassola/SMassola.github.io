@@ -54,6 +54,9 @@
 	var Route = ReactRouter.Route;
 	var IndexRoute = ReactRouter.IndexRoute;
 	var hashHistory = ReactRouter.hashHistory;
+	var routerHistory = __webpack_require__(175).useRouterHistory;
+	var createHistory = __webpack_require__(185);
+	var appHistory = routerHistory(createHistory)({ queryKey: false });
 	
 	var Home = __webpack_require__(238);
 	
@@ -76,8 +79,7 @@
 	
 	document.addEventListener("DOMContentLoaded", function () {
 	  var root = document.getElementById('root');
-	  console.log(root);
-	  ReactDOM.render(React.createElement(Router, { history: hashHistory, routes: routes }), root);
+	  ReactDOM.render(React.createElement(Router, { history: appHistory, routes: routes }), root);
 	});
 
 /***/ },
@@ -27260,7 +27262,7 @@
 	          React.createElement(
 	            "div",
 	            { className: "profile-info-about-paragraph" },
-	            "I am a strategist. I love a challenge, be it a design problem, a coding challenge, a riddle, a game of chess. No challenge is too big nor too small. That was the allure that drew me in to become a web developer - I'm constantly being challenged. I'm constantly acquiring new skills. I'm constantly entertained. I bring the design and problem solving capabilities of a mechanical engineer with every challenge in software development that I encounter. There isn't a challenge I can't overcome."
+	            "I am a strategist and I love a challenge. Be it a design problem, a coding challenge, a riddle, a game of chess. No challenge is too big nor too small. That was the allure that drew me in to become a software developer - I'm constantly being challenged. I'm constantly acquiring new skills. I'm constantly entertained. I bring the design and problem solving capabilities of a pragmatic mechanical engineer to every challenge in software development that I encounter. There isn't a challenge I can't overcome."
 	          )
 	        ),
 	        React.createElement(
@@ -27350,7 +27352,7 @@
 	    });
 	  },
 	  _handleResume: function _handleResume() {
-	    window.open('./Resume.pdf', '_blank');
+	    window.open('./Steven_Massola.pdf', '_blank');
 	  },
 	  _handleLinkedIn: function _handleLinkedIn() {
 	    window.open('https://www.linkedin.com/in/steven-massola-b25773122', '_blank');
@@ -27545,7 +27547,7 @@
 	            React.createElement(
 	              "div",
 	              { className: "project1-summary" },
-	              "An Annotation Site"
+	              "Single page web app that allows users to annotate their favorite songs"
 	            ),
 	            React.createElement(
 	              "div",
@@ -27582,7 +27584,7 @@
 	            React.createElement(
 	              "div",
 	              { className: "project2-summary" },
-	              "Handy chrome extension for front end developers"
+	              "Handy chrome extension for front end developers that helps visualize elements on the page"
 	            ),
 	            React.createElement(
 	              "div",
@@ -27619,7 +27621,7 @@
 	            React.createElement(
 	              "div",
 	              { className: "project3-summary" },
-	              "Javascript game inspired by IOS Dactyl app"
+	              "Javascript game inspired by IOS Dactyl app where players try to defuse as many bombs as they can"
 	            ),
 	            React.createElement(
 	              "div",
