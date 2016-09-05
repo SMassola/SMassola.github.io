@@ -27114,20 +27114,20 @@
 	
 	var React = __webpack_require__(1);
 	
-	var NavBar = __webpack_require__(243);
+	var NavBar = __webpack_require__(239);
 	var Splash = __webpack_require__(240);
-	var Profile = __webpack_require__(239);
-	var Education = __webpack_require__(247);
-	var Experience = __webpack_require__(249);
-	var Skills = __webpack_require__(248);
-	var Projects = __webpack_require__(246);
-	var Contact = __webpack_require__(242);
+	var Profile = __webpack_require__(241);
+	var Education = __webpack_require__(242);
+	var Experience = __webpack_require__(243);
+	var Skills = __webpack_require__(244);
+	var Projects = __webpack_require__(245);
+	var Contact = __webpack_require__(246);
 	
 	var Home = React.createClass({
 	  displayName: 'Home',
 	  getInitialState: function getInitialState() {
 	    return {
-	      profile: false,
+	      profile: true,
 	      projects: false,
 	      education: false,
 	      skills: false,
@@ -27136,22 +27136,22 @@
 	    };
 	  },
 	  _profileClick: function _profileClick() {
-	    this.setState({ profile: !this.state.profile, projects: false, education: false, skills: false, experience: false, contact: false });
+	    this.setState({ profile: true, projects: false, education: false, skills: false, experience: false, contact: false });
 	  },
 	  _projectsClick: function _projectsClick() {
-	    this.setState({ profile: false, projects: !this.state.projects, education: false, skills: false, experience: false, contact: false });
+	    this.setState({ profile: false, projects: true, education: false, skills: false, experience: false, contact: false });
 	  },
 	  _skillsClick: function _skillsClick() {
-	    this.setState({ profile: false, projects: false, education: false, skills: !this.state.skills, experience: false, contact: false });
+	    this.setState({ profile: false, projects: false, education: false, skills: true, experience: false, contact: false });
 	  },
 	  _educationClick: function _educationClick() {
-	    this.setState({ profile: false, projects: false, education: !this.state.education, skills: false, experience: false, contact: false });
+	    this.setState({ profile: false, projects: false, education: true, skills: false, experience: false, contact: false });
 	  },
 	  _experienceClick: function _experienceClick() {
-	    this.setState({ profile: false, projects: false, education: false, skills: false, experience: !this.state.experience, contact: false });
+	    this.setState({ profile: false, projects: false, education: false, skills: false, experience: true, contact: false });
 	  },
 	  _contactClick: function _contactClick() {
-	    this.setState({ profile: false, projects: false, education: false, skills: false, experience: false, contact: !this.state.contact });
+	    this.setState({ profile: false, projects: false, education: false, skills: false, experience: false, contact: true });
 	  },
 	  render: function render() {
 	    return React.createElement(
@@ -27210,6 +27210,40 @@
 
 /***/ },
 /* 239 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var NavBar = React.createClass({
+	  displayName: 'NavBar',
+	  render: function render() {
+	    return React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = NavBar;
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var Splash = React.createClass({
+	  displayName: 'Splash',
+	  render: function render() {
+	    return React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Splash;
+
+/***/ },
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27294,7 +27328,7 @@
 	            React.createElement(
 	              "div",
 	              null,
-	              "23 Years Old"
+	              "24 Years Old"
 	            ),
 	            React.createElement(
 	              "div",
@@ -27316,24 +27350,6 @@
 	module.exports = Profile;
 
 /***/ },
-/* 240 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var React = __webpack_require__(1);
-	
-	var Splash = React.createClass({
-	  displayName: 'Splash',
-	  render: function render() {
-	    return React.createElement('div', null);
-	  }
-	});
-	
-	module.exports = Splash;
-
-/***/ },
-/* 241 */,
 /* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -27341,104 +27357,124 @@
 	
 	var React = __webpack_require__(1);
 	
-	var Contact = React.createClass({
-	  displayName: "Contact",
+	var Education = React.createClass({
+	  displayName: "Education",
 	  componentDidMount: function componentDidMount() {
-	    var elem = document.getElementsByClassName("contact-container")[0];
+	    var elem = document.getElementsByClassName("education-container")[0];
 	    elem.style.opacity = 0;
 	    window.requestAnimationFrame(function () {
 	      elem.style.transition = "opacity 500ms";
 	      elem.style.opacity = 1;
 	    });
 	  },
-	  _handleResume: function _handleResume() {
-	    window.open('./Steven_Massola.pdf', '_blank');
-	  },
-	  _handleLinkedIn: function _handleLinkedIn() {
-	    window.open('https://www.linkedin.com/in/steven-massola-b25773122', '_blank');
-	  },
-	  _handleGithub: function _handleGithub() {
-	    window.open('https://github.com/SMassola', '_blank');
-	  },
 	  render: function render() {
 	    return React.createElement(
 	      "div",
-	      { className: "contact-container" },
+	      { className: "education-container" },
 	      React.createElement(
 	        "div",
-	        { className: "contact-header" },
+	        { className: "education-header" },
 	        React.createElement(
 	          "div",
-	          { className: "contact-header-title" },
-	          "Contact Information"
+	          { className: "education-header-title" },
+	          "Education"
 	        ),
 	        React.createElement(
 	          "div",
-	          { className: "contact-header-summary" },
-	          "Get In Touch"
+	          { className: "education-header-summary" },
+	          "University of Waterloo + App Academy"
 	        )
 	      ),
 	      React.createElement("hr", null),
 	      React.createElement(
 	        "div",
-	        { className: "contact-info-container" },
+	        { className: "education-info-container" },
 	        React.createElement(
-	          "div",
-	          { className: "email-container flex-item" },
+	          "ul",
+	          { className: "education-list" },
 	          React.createElement(
-	            "div",
-	            { className: "contact-title" },
-	            "EMAIL"
+	            "li",
+	            { className: "education-list-item" },
+	            React.createElement(
+	              "div",
+	              { className: "education-item" },
+	              React.createElement(
+	                "div",
+	                { className: "education-info" },
+	                React.createElement("div", { className: "education-info-front education-img-1" }),
+	                React.createElement(
+	                  "div",
+	                  { className: "education-info-back" },
+	                  React.createElement(
+	                    "h3",
+	                    null,
+	                    "BASc in Honors Mechanical Engineering"
+	                  ),
+	                  React.createElement(
+	                    "h5",
+	                    null,
+	                    "Sept 2010 - Oct 2015"
+	                  ),
+	                  React.createElement(
+	                    "p",
+	                    null,
+	                    "5-year, co-operative program - 5 four-month mechanical engineering internships"
+	                  ),
+	                  React.createElement(
+	                    "p",
+	                    null,
+	                    "University of Waterloo",
+	                    React.createElement(
+	                      "a",
+	                      { href: "https://uwaterloo.ca/" },
+	                      "Learn More"
+	                    )
+	                  )
+	                )
+	              )
+	            )
 	          ),
 	          React.createElement(
-	            "div",
-	            { className: "email-name" },
-	            "Steven.Massola@gmail.com"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "address-container flex-item" },
-	          React.createElement(
-	            "div",
-	            { className: "contact-title" },
-	            "ADDRESS"
-	          ),
-	          React.createElement(
-	            "div",
-	            { className: "address-name" },
-	            "43 Chelford Road, North York, ON",
-	            React.createElement("br", null),
-	            "276 Ellsworth Street, San Francisco, CA"
-	          )
-	        ),
-	        React.createElement(
-	          "a",
-	          { className: "resume-container flex-item" },
-	          React.createElement(
-	            "div",
-	            { onClick: this._handleResume, className: "contact-title resume-title" },
-	            "RESUME"
-	          ),
-	          React.createElement(
-	            "div",
-	            { className: "resume-name" },
-	            "Formal documentation of my credentials"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "social-container flex-item" },
-	          React.createElement(
-	            "div",
-	            { className: "contact-title" },
-	            "SOCIAL MEDIA"
-	          ),
-	          React.createElement(
-	            "div",
-	            { className: "contact-icons" },
-	            React.createElement("img", { onClick: this._handleLinkedIn, className: "icon", src: "./app/assets/images/linkedin-icon.png" }),
-	            React.createElement("img", { onClick: this._handleGithub, className: "icon", src: "./app/assets/images/github-icon.png" })
+	            "li",
+	            { className: "education-list-item" },
+	            React.createElement(
+	              "div",
+	              { className: "education-item" },
+	              React.createElement(
+	                "div",
+	                { className: "education-info" },
+	                React.createElement("div", { className: "education-info-front education-img-2" }),
+	                React.createElement(
+	                  "div",
+	                  { className: "education-info-back" },
+	                  React.createElement(
+	                    "h3",
+	                    null,
+	                    "Web Development Program"
+	                  ),
+	                  React.createElement(
+	                    "h5",
+	                    null,
+	                    "May 2016 - July 2016"
+	                  ),
+	                  React.createElement(
+	                    "p",
+	                    null,
+	                    "12 week immersive 1000-hour web development program with 3% acceptance rate"
+	                  ),
+	                  React.createElement(
+	                    "p",
+	                    null,
+	                    "App Academy",
+	                    React.createElement(
+	                      "a",
+	                      { href: "https://www.appacademy.io/" },
+	                      "Learn More"
+	                    )
+	                  )
+	                )
+	              )
+	            )
 	          )
 	        )
 	      )
@@ -27446,29 +27482,224 @@
 	  }
 	});
 	
-	module.exports = Contact;
+	module.exports = Education;
 
 /***/ },
 /* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	var React = __webpack_require__(1);
 	
-	var NavBar = React.createClass({
-	  displayName: 'NavBar',
+	var Experience = React.createClass({
+	  displayName: "Experience",
+	  componentDidMount: function componentDidMount() {
+	    var elem = document.getElementsByClassName("experience-container")[0];
+	    elem.style.opacity = 0;
+	    window.requestAnimationFrame(function () {
+	      elem.style.transition = "opacity 500ms";
+	      elem.style.opacity = 1;
+	    });
+	  },
 	  render: function render() {
-	    return React.createElement('div', null);
+	    return React.createElement(
+	      "div",
+	      { className: "experience-container" },
+	      React.createElement(
+	        "div",
+	        { className: "experience-header" },
+	        React.createElement(
+	          "div",
+	          { className: "experience-header-title" },
+	          "Work Experience"
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "experience-header-summary" },
+	          "Engineer and Designer"
+	        )
+	      ),
+	      React.createElement("hr", null),
+	      React.createElement(
+	        "div",
+	        { className: "experience-info-container" },
+	        React.createElement(
+	          "div",
+	          { className: "experience-info" },
+	          React.createElement("img", { className: "work-img", src: "https://upload.wikimedia.org/wikipedia/en/d/db/Amec_Foster_Wheeler_logo.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "work-desc" },
+	            "May 2015 - Aug 2015"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "experience-info" },
+	          React.createElement("img", { className: "work-img", src: "http://www.korex-ca.com/wp-content/uploads/2014/09/korex.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "work-desc" },
+	            "May 2014 - Aug 2014"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "experience-info" },
+	          React.createElement("img", { className: "work-img", src: "https://upload.wikimedia.org/wikipedia/en/9/98/City_of_Toronto_Logo.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "work-desc" },
+	            "Sept 2013 - Dec 2013"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "experience-info" },
+	          React.createElement("img", { className: "work-img", src: "https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Golder_Associates_logo.svg/220px-Golder_Associates_logo.svg.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "work-desc" },
+	            "Sept 2011 - Dec 2011"
+	          )
+	        )
+	      )
+	    );
 	  }
 	});
 	
-	module.exports = NavBar;
+	module.exports = Experience;
 
 /***/ },
-/* 244 */,
-/* 245 */,
-/* 246 */
+/* 244 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var React = __webpack_require__(1);
+	
+	var Skills = React.createClass({
+	  displayName: "Skills",
+	  componentDidMount: function componentDidMount() {
+	    var elem = document.getElementsByClassName("skills-container")[0];
+	    elem.style.opacity = 0;
+	    window.requestAnimationFrame(function () {
+	      elem.style.transition = "opacity 500ms";
+	      elem.style.opacity = 1;
+	    });
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      { className: "skills-container" },
+	      React.createElement(
+	        "div",
+	        { className: "skills-header" },
+	        React.createElement(
+	          "div",
+	          { className: "skills-header-title" },
+	          "Skills"
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skills-header-summary" },
+	          "Web Development"
+	        )
+	      ),
+	      React.createElement("hr", null),
+	      React.createElement(
+	        "div",
+	        { className: "skills-info-container" },
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/ruby-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name ruby" },
+	            "RUBY"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/rails-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name rails" },
+	            "RAILS"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/js-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name js" },
+	            "JAVASCRIPT"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/jquery-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name jquery" },
+	            "JQUERY"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/react-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name react" },
+	            "REACT"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/flux-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name flux" },
+	            "FLUX"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/html-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name html" },
+	            "HTML"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "skill-info" },
+	          React.createElement("img", { className: "skill-img", src: "app/assets/images/css-icon.png" }),
+	          React.createElement(
+	            "div",
+	            { className: "skill-name css" },
+	            "CSS"
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = Skills;
+
+/***/ },
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27655,131 +27886,111 @@
 	// <div className="project1-summary">A lyrics annotation website</div>
 
 /***/ },
-/* 247 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	var React = __webpack_require__(1);
 	
-	var Education = React.createClass({
-	  displayName: "Education",
+	var Contact = React.createClass({
+	  displayName: "Contact",
 	  componentDidMount: function componentDidMount() {
-	    var elem = document.getElementsByClassName("education-container")[0];
+	    var elem = document.getElementsByClassName("contact-container")[0];
 	    elem.style.opacity = 0;
 	    window.requestAnimationFrame(function () {
 	      elem.style.transition = "opacity 500ms";
 	      elem.style.opacity = 1;
 	    });
 	  },
+	  _handleResume: function _handleResume() {
+	    window.open('./Steven_Massola.pdf', '_blank');
+	  },
+	  _handleLinkedIn: function _handleLinkedIn() {
+	    window.open('https://www.linkedin.com/in/steven-massola-b25773122', '_blank');
+	  },
+	  _handleGithub: function _handleGithub() {
+	    window.open('https://github.com/SMassola', '_blank');
+	  },
 	  render: function render() {
 	    return React.createElement(
 	      "div",
-	      { className: "education-container" },
+	      { className: "contact-container" },
 	      React.createElement(
 	        "div",
-	        { className: "education-header" },
+	        { className: "contact-header" },
 	        React.createElement(
 	          "div",
-	          { className: "education-header-title" },
-	          "Education"
+	          { className: "contact-header-title" },
+	          "Contact Information"
 	        ),
 	        React.createElement(
 	          "div",
-	          { className: "education-header-summary" },
-	          "University of Waterloo + App Academy"
+	          { className: "contact-header-summary" },
+	          "Get In Touch"
 	        )
 	      ),
 	      React.createElement("hr", null),
 	      React.createElement(
 	        "div",
-	        { className: "education-info-container" },
+	        { className: "contact-info-container" },
 	        React.createElement(
-	          "ul",
-	          { className: "education-list" },
+	          "div",
+	          { className: "email-container flex-item" },
 	          React.createElement(
-	            "li",
-	            { className: "education-list-item" },
-	            React.createElement(
-	              "div",
-	              { className: "education-item" },
-	              React.createElement(
-	                "div",
-	                { className: "education-info" },
-	                React.createElement("div", { className: "education-info-front education-img-1" }),
-	                React.createElement(
-	                  "div",
-	                  { className: "education-info-back" },
-	                  React.createElement(
-	                    "h3",
-	                    null,
-	                    "BASc in Honors Mechanical Engineering"
-	                  ),
-	                  React.createElement(
-	                    "h5",
-	                    null,
-	                    "Sept 2010 - Oct 2015"
-	                  ),
-	                  React.createElement(
-	                    "p",
-	                    null,
-	                    "5-year, co-operative program - 5 four-month mechanical engineering internships"
-	                  ),
-	                  React.createElement(
-	                    "p",
-	                    null,
-	                    "University of Waterloo",
-	                    React.createElement(
-	                      "a",
-	                      { href: "https://uwaterloo.ca/" },
-	                      "Learn More"
-	                    )
-	                  )
-	                )
-	              )
-	            )
+	            "div",
+	            { className: "contact-title" },
+	            "EMAIL"
 	          ),
 	          React.createElement(
-	            "li",
-	            { className: "education-list-item" },
-	            React.createElement(
-	              "div",
-	              { className: "education-item" },
-	              React.createElement(
-	                "div",
-	                { className: "education-info" },
-	                React.createElement("div", { className: "education-info-front education-img-2" }),
-	                React.createElement(
-	                  "div",
-	                  { className: "education-info-back" },
-	                  React.createElement(
-	                    "h3",
-	                    null,
-	                    "Web Development Program"
-	                  ),
-	                  React.createElement(
-	                    "h5",
-	                    null,
-	                    "May 2016 - July 2016"
-	                  ),
-	                  React.createElement(
-	                    "p",
-	                    null,
-	                    "12 week immersive 1000-hour web development program with 3% acceptance rate"
-	                  ),
-	                  React.createElement(
-	                    "p",
-	                    null,
-	                    "App Academy",
-	                    React.createElement(
-	                      "a",
-	                      { href: "https://www.appacademy.io/" },
-	                      "Learn More"
-	                    )
-	                  )
-	                )
-	              )
-	            )
+	            "div",
+	            { className: "email-name" },
+	            "Steven.Massola@gmail.com"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "address-container flex-item" },
+	          React.createElement(
+	            "div",
+	            { className: "contact-title" },
+	            "ADDRESS"
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "address-name" },
+	            "43 Chelford Road, North York, ON",
+	            React.createElement("br", null),
+	            "276 Ellsworth Street, San Francisco, CA"
+	          )
+	        ),
+	        React.createElement(
+	          "a",
+	          { className: "resume-container flex-item" },
+	          React.createElement(
+	            "div",
+	            { onClick: this._handleResume, className: "contact-title resume-title" },
+	            "RESUME"
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "resume-name" },
+	            "Formal documentation of my credentials"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "social-container flex-item" },
+	          React.createElement(
+	            "div",
+	            { className: "contact-title" },
+	            "SOCIAL MEDIA"
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "contact-icons" },
+	            React.createElement("img", { onClick: this._handleLinkedIn, className: "icon", src: "./app/assets/images/linkedin-icon.png" }),
+	            React.createElement("img", { onClick: this._handleGithub, className: "icon", src: "./app/assets/images/github-icon.png" })
 	          )
 	        )
 	      )
@@ -27787,221 +27998,7 @@
 	  }
 	});
 	
-	module.exports = Education;
-
-/***/ },
-/* 248 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	var React = __webpack_require__(1);
-	
-	var Skills = React.createClass({
-	  displayName: "Skills",
-	  componentDidMount: function componentDidMount() {
-	    var elem = document.getElementsByClassName("skills-container")[0];
-	    elem.style.opacity = 0;
-	    window.requestAnimationFrame(function () {
-	      elem.style.transition = "opacity 500ms";
-	      elem.style.opacity = 1;
-	    });
-	  },
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { className: "skills-container" },
-	      React.createElement(
-	        "div",
-	        { className: "skills-header" },
-	        React.createElement(
-	          "div",
-	          { className: "skills-header-title" },
-	          "Skills"
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "skills-header-summary" },
-	          "Web Development"
-	        )
-	      ),
-	      React.createElement("hr", null),
-	      React.createElement(
-	        "div",
-	        { className: "skills-info-container" },
-	        React.createElement(
-	          "div",
-	          { className: "skill-info" },
-	          React.createElement("img", { className: "skill-img", src: "app/assets/images/ruby-icon.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "skill-name ruby" },
-	            "RUBY"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "skill-info" },
-	          React.createElement("img", { className: "skill-img", src: "app/assets/images/rails-icon.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "skill-name rails" },
-	            "RAILS"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "skill-info" },
-	          React.createElement("img", { className: "skill-img", src: "app/assets/images/js-icon.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "skill-name js" },
-	            "JAVASCRIPT"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "skill-info" },
-	          React.createElement("img", { className: "skill-img", src: "app/assets/images/jquery-icon.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "skill-name jquery" },
-	            "JQUERY"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "skill-info" },
-	          React.createElement("img", { className: "skill-img", src: "app/assets/images/react-icon.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "skill-name react" },
-	            "REACT"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "skill-info" },
-	          React.createElement("img", { className: "skill-img", src: "app/assets/images/flux-icon.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "skill-name flux" },
-	            "FLUX"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "skill-info" },
-	          React.createElement("img", { className: "skill-img", src: "app/assets/images/html-icon.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "skill-name html" },
-	            "HTML"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "skill-info" },
-	          React.createElement("img", { className: "skill-img", src: "app/assets/images/css-icon.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "skill-name css" },
-	            "CSS"
-	          )
-	        )
-	      )
-	    );
-	  }
-	});
-	
-	module.exports = Skills;
-
-/***/ },
-/* 249 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	var React = __webpack_require__(1);
-	
-	var Experience = React.createClass({
-	  displayName: "Experience",
-	  componentDidMount: function componentDidMount() {
-	    var elem = document.getElementsByClassName("experience-container")[0];
-	    elem.style.opacity = 0;
-	    window.requestAnimationFrame(function () {
-	      elem.style.transition = "opacity 500ms";
-	      elem.style.opacity = 1;
-	    });
-	  },
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { className: "experience-container" },
-	      React.createElement(
-	        "div",
-	        { className: "experience-header" },
-	        React.createElement(
-	          "div",
-	          { className: "experience-header-title" },
-	          "Work Experience"
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "experience-header-summary" },
-	          "Engineer and Designer"
-	        )
-	      ),
-	      React.createElement("hr", null),
-	      React.createElement(
-	        "div",
-	        { className: "experience-info-container" },
-	        React.createElement(
-	          "div",
-	          { className: "experience-info" },
-	          React.createElement("img", { className: "work-img", src: "https://upload.wikimedia.org/wikipedia/en/d/db/Amec_Foster_Wheeler_logo.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "work-desc" },
-	            "May 2015 - Aug 2015"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "experience-info" },
-	          React.createElement("img", { className: "work-img", src: "http://www.korex-ca.com/wp-content/uploads/2014/09/korex.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "work-desc" },
-	            "May 2014 - Aug 2014"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "experience-info" },
-	          React.createElement("img", { className: "work-img", src: "https://upload.wikimedia.org/wikipedia/en/9/98/City_of_Toronto_Logo.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "work-desc" },
-	            "Sept 2013 - Dec 2013"
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "experience-info" },
-	          React.createElement("img", { className: "work-img", src: "https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Golder_Associates_logo.svg/220px-Golder_Associates_logo.svg.png" }),
-	          React.createElement(
-	            "div",
-	            { className: "work-desc" },
-	            "Sept 2011 - Dec 2011"
-	          )
-	        )
-	      )
-	    );
-	  }
-	});
-	
-	module.exports = Experience;
+	module.exports = Contact;
 
 /***/ }
 /******/ ]);

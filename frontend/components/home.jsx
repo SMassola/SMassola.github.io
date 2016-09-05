@@ -23,22 +23,22 @@ const Home = React.createClass({
   },
 
   _profileClick() {
-    this.setState({profile: !this.state.profile, projects: false, education: false, skills: false, experience: false, contact: false});
+    this.setState({profile: true, projects: false, education: false, skills: false, experience: false, contact: false});
   },
   _projectsClick() {
-    this.setState({profile: false, projects: !this.state.projects, education: false, skills: false, experience: false, contact: false});
+    this.setState({profile: false, projects: true, education: false, skills: false, experience: false, contact: false});
   },
   _skillsClick() {
-    this.setState({profile: false, projects: false, education: false, skills: !this.state.skills, experience: false, contact: false});
+    this.setState({profile: false, projects: false, education: false, skills: true, experience: false, contact: false});
   },
   _educationClick() {
-    this.setState({profile: false, projects: false, education: !this.state.education, skills: false, experience: false, contact: false});
+    this.setState({profile: false, projects: false, education: true, skills: false, experience: false, contact: false});
   },
   _experienceClick() {
-    this.setState({profile: false, projects: false, education: false, skills: false, experience: !this.state.experience, contact: false});
+    this.setState({profile: false, projects: false, education: false, skills: false, experience: true, contact: false});
   },
   _contactClick() {
-    this.setState({profile: false, projects: false, education: false, skills: false, experience: false, contact: !this.state.contact});
+    this.setState({profile: false, projects: false, education: false, skills: false, experience: false, contact: true});
   },
 
   render() {
