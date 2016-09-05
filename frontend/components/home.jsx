@@ -13,7 +13,7 @@ const Home = React.createClass({
 
   getInitialState() {
     return({
-      profile: false,
+      profile: true,
       projects: false,
       education: false,
       skills: false,

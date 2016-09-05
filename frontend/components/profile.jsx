@@ -39,7 +39,7 @@ const Profile = React.createClass({
               <div className="bold">Name:</div>
               <div>Steven Massola</div>
               <div className="bold">Age:</div>
-              <div>23 Years Old</div>
+              <div>24 Years Old</div>
               <div className="bold">Location:</div>
               <div>San Francisco, California + Toronto, Ontario</div>
             </div>
