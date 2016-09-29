@@ -109,6 +109,7 @@
   left: 0;
   right: 0;
   opacity: 0;
+  overflow:hidden;
 }
 
 .tint:hover .project1-caption {
