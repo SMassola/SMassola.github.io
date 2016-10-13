@@ -22,6 +22,9 @@ const Projects = React.createClass({
       case 3:
         window.location.href = "https://smassola.github.io/Dactyl";
         break;
+      case 4:
+        window.location.href = "https://dotaradar.herokuapp.com";
+        break;
     }
   },
 
@@ -35,6 +38,9 @@ const Projects = React.createClass({
         break;
       case 3:
         window.location.href = "https://github.com/SMassola/Dactyl";
+        break;
+      case 4:
+        window.location.href = "https://github.com/SMassola/DotaRadar";
         break;
     }
   },
@@ -87,6 +93,19 @@ const Projects = React.createClass({
             </div>
             <figure className="project3-image">
               <img src="app/assets/images/Dactyl.png"></img>
+            </figure>
+          </div>
+          <div className="project4-container tint">
+            <div className="project4-caption">
+              <div className="project4-title">DotaRadar</div>
+              <div className="project4-summary">Mobile enabled data visualization web app for popular Steam game Dota 2</div>
+              <div className="project-button-container">
+                <button className="live-button" id="4" onClick={this._handleLive}>Live</button>
+                <button className="github-button" id="4" onClick={this._handleGit}>Github</button>
+              </div>
+            </div>
+            <figure className="project4-image">
+              <img src="app/assets/images/DotaRadar-ex.png"></img>
             </figure>
           </div>
         </div>
