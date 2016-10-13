@@ -27728,7 +27728,7 @@
 	        window.location.href = "https://smassola.github.io/Dactyl";
 	        break;
 	      case 4:
-	        window.location.href = "https://dotaradar.herokuapp.com";
+	        window.location.href = "http://dotaradar.herokuapp.com";
 	        break;
 	    }
 	  },
@@ -27947,7 +27947,7 @@
 	    });
 	  },
 	  _handleResume: function _handleResume() {
-	    window.open('./Steven_Massola.pdf', '_blank');
+	    window.open('./Steven_Massola_SF.pdf', '_blank');
 	  },
 	  _handleLinkedIn: function _handleLinkedIn() {
 	    window.open('https://www.linkedin.com/in/steven-massola-b25773122', '_blank');

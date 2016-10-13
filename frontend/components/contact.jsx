@@ -12,7 +12,7 @@ const Contact = React.createClass({
   },
 
   _handleResume() {
-    window.open('./Steven_Massola.pdf', '_blank');
+    window.open('./Steven_Massola_SF.pdf', '_blank');
   },
 
   _handleLinkedIn() {

@@ -23,7 +23,7 @@ const Projects = React.createClass({
         window.location.href = "https://smassola.github.io/Dactyl";
         break;
       case 4:
-        window.location.href = "https://dotaradar.herokuapp.com";
+        window.location.href = "http://dotaradar.herokuapp.com";
         break;
     }
   },
