@@ -48,7 +48,7 @@
   margin: 20px 20px;
 }
 
-.project1-container, .project2-container, .project3-container {
+.project1-container, .project2-container, .project3-container, .project4-container {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap-reverse;
@@ -56,7 +56,7 @@
   margin: 25px;
 }
 
-.project1-image, .project2-image, .project3-image {
+.project1-image, .project2-image, .project3-image, .project4-image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,7 +65,7 @@
   overflow: hidden;
 }
 
-.project1-image > img, .project2-image > img, .project3-image > img {
+.project1-image > img, .project2-image > img, .project3-image > img, .project4-image > img {
   display: block;
   margin: 0 auto;
   max-height: 150%;
@@ -99,7 +99,7 @@
   background: rgba(34, 163, 159, 0.9);
 }
 
-.project1-caption, .project2-caption, .project3-caption {
+.project1-caption, .project2-caption, .project3-caption, .project4-caption {
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -127,7 +127,12 @@
   color: white;
 }
 
-.project1-title, .project2-title, .project3-title {
+.tint:hover .project4-caption {
+  opacity: 1;
+  color: white;
+}
+
+.project1-title, .project2-title, .project3-title, .project4-title {
   padding-bottom: 15px;
   width: 100%;
   position: relative;
@@ -135,7 +140,7 @@
   font-size: 30px;
 }
 
-.project1-summary, .project2-summary, .project3-summary {
+.project1-summary, .project2-summary, .project3-summary, .project4-summary {
   pointer-events: none;
   padding-top: 15px;
   opacity: 0;
@@ -176,7 +181,7 @@
   color: black;
 }
 
-.project1-title::after, .project2-title:after, .project3-title:after {
+.project1-title::after, .project2-title:after, .project3-title:after, .project4-title:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -200,6 +205,10 @@
   width: 100%;
 }
 
+.tint:hover .project4-title:after {
+  width: 100%;
+}
+
 .tint:hover .project1-summary {
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
@@ -213,6 +222,12 @@
 }
 
 .tint:hover .project3-summary {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.tint:hover .project4-summary {
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);

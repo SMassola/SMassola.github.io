@@ -27727,6 +27727,9 @@
 	      case 3:
 	        window.location.href = "https://smassola.github.io/Dactyl";
 	        break;
+	      case 4:
+	        window.location.href = "https://dotaradar.herokuapp.com";
+	        break;
 	    }
 	  },
 	  _handleGit: function _handleGit(e) {
@@ -27739,6 +27742,9 @@
 	        break;
 	      case 3:
 	        window.location.href = "https://github.com/SMassola/Dactyl";
+	        break;
+	      case 4:
+	        window.location.href = "https://github.com/SMassola/DotaRadar";
 	        break;
 	    }
 	  },
@@ -27873,6 +27879,43 @@
 	            "figure",
 	            { className: "project3-image" },
 	            React.createElement("img", { src: "app/assets/images/Dactyl.png" })
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "project4-container tint" },
+	          React.createElement(
+	            "div",
+	            { className: "project4-caption" },
+	            React.createElement(
+	              "div",
+	              { className: "project4-title" },
+	              "DotaRadar"
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "project4-summary" },
+	              "Mobile enabled data visualization web app for popular Steam game Dota 2"
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "project-button-container" },
+	              React.createElement(
+	                "button",
+	                { className: "live-button", id: "4", onClick: this._handleLive },
+	                "Live"
+	              ),
+	              React.createElement(
+	                "button",
+	                { className: "github-button", id: "4", onClick: this._handleGit },
+	                "Github"
+	              )
+	            )
+	          ),
+	          React.createElement(
+	            "figure",
+	            { className: "project4-image" },
+	            React.createElement("img", { src: "app/assets/images/DotaRadar-ex.png" })
 	          )
 	        )
 	      )
